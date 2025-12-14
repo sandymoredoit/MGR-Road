@@ -1,4 +1,4 @@
-⚠️ Sorry, model_MGRroad.py will be released upon paper acceptance.
+
 
 # MGR-Road
 
@@ -6,36 +6,61 @@
 
 This repository contains the official implementation of **MGR-Road**.
 
-This code is based on [SAM-Road](https://github.com/htcr/sam_road). We introduce **Collaborative Optimization**, **Soft Decoupling**, and **Region-Aware Sampling** to resolve the conflict between semantic segmentation and geometric topology reasoning.
+This code is based on [SAM-Road](https://github.com/htcr/sam_road). 
 
-## 🚀 Usage
+⚠️ Sorry, the Key Modifications in model_MGRroad.py will be released upon paper acceptance.
 
-Since this project modifies the model architecture of SAM-Road while keeping the data pipeline and training logic intact, you can set it up as a drop-in replacement.
+## Installation
+You need the following:
+- an Nvidia GPU with latest CUDA and driver.
+- the latest pytorch.
+- pytorch lightning.
+- wandb.
+- Go, just for the APLS metric.
+- and pip install whatever is missing.
 
-### 1. Prerequisite
-Clone the original SAM-Road repository and set up the environment:
+## Getting Started
 
-```bash
-git clone https://github.com/htcr/sam_road.git
-cd sam_road
-# Follow the installation and data preparation steps in the original README
+### SAM Preparation
+Download the ViT-B checkpoint from the official SAM directory. Put it under:  
+```
+-sam_road++  
+--sam_ckpts  
+---sam_vit_b_01ec64.pth  
 ```
 
-### 2. Apply MGR-Road
-Replace the original `sam_road/model.py` with the `model_MGRroad.py` provided in this repository (rename it to `model.py`).
+### Data Preparation
+Refer to the instructions in the sam_road repo to download City-scale and SpaceNet datasets.
+Put them in the main directory, structure like:  
+```
+-sam_road++  
+--cityscale  
+---20cities  
+--spacenet  
+---RGB_1.0_meter  
+```
+And run python generate_labes.py under both dirs.
 
-```bash
-# Assuming you are in the root of sam_road
-cp /path/to/MGR-Road/model_MGRroad.py ./sam_road/model.py
+### Training
+City-scale dataset:  
+
+```
+python train.py --config=config/toponet_vitb_512_cityscale.yaml  --seed 42
 ```
 
-### 3. Train & Evaluate
-Run the standard training commands as described in SAM-Road:
-
-```bash
-# Example
-python train.py --config configs/sam_road_cityscale.yaml
+SpaceNet dataset:
 ```
+python train.py --config=config/toponet_vitb_256_spacenet.yaml --seed 42
+```
+
+### Inference
+```
+python inferencer.py --config=path_to_the_same_config_for_training--checkpoint=path_to_ckpt  
+```
+
+### Test
+For APLS and TOPO metrics, please refer to [Sat2Graph](https://github.com/songtaohe/Sat2Graph). 
+
 
 ## 📝 Key Modifications
 
