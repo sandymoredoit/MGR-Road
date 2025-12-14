@@ -1,6 +1,6 @@
 
 
-# MGR-Road: Resolving Semantic-Geometric Conflict in End-to-End Road Extraction
+# MGR-Road
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
