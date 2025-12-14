@@ -8,7 +8,7 @@ This repository contains the official implementation of **MGR-Road**.
 
 This code is based on [SAM-Road](https://github.com/htcr/sam_road). 
 
-⚠️ Sorry, the Key Modifications in model_MGRroad.py will be released upon paper acceptance.
+⚠️ Sorry, the model_MGRroad.py will be released upon paper acceptance.
 
 ## Installation
 You need the following:
