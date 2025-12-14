@@ -1,4 +1,4 @@
-
+⚠️ Sorry, model_MGRroad.py will be released upon paper acceptance.
 
 # MGR-Road
 
