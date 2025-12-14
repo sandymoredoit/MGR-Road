@@ -26,7 +26,7 @@ Replace the original `sam_road/model.py` with the `model_MGRroad.py` provided in
 
 ```bash
 # Assuming you are in the root of sam_road
-cp /path/to/MGR-Road/model16.py ./sam_road/model.py
+cp /path/to/MGR-Road/model_MGRroad.py ./sam_road/model.py
 ```
 
 ### 3. Train & Evaluate
