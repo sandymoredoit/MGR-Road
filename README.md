@@ -72,18 +72,18 @@ The core logic is implemented in `model_MGRroad.py` (renamed to `model.py`), cor
 
 ## 📜 Citation
 
-If you use this code, please cite our paper:
+#If you use this code, please cite our paper:
 
-```bibtex
-@article{mgrroad2025,
-  title={MGR-Road: Resolving Semantic-Geometric Conflict in End-to-End Road Extraction},
-  author={},
-  journal={},
-  year={2025},
-  volume={XX},
-  number={XX}
-}
-```
+#```bibtex
+#@article{mgrroad2025,
+#  title={MGR-Road: Resolving Semantic-Geometric Conflict in End-to-End Road Extraction},
+#  author={Man Yuan },
+#  journal={},
+#  year={2025},
+#  volume={XX},
+#  number={XX}
+#}
+#```
 
 ## 🙏 Acknowledgements
 We thank the authors of [SAM-Road](https://github.com/htcr/sam_road) for their open-source contribution.
