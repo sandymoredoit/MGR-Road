@@ -45,12 +45,12 @@ And run python generate_labes.py under both dirs.
 City-scale dataset:  
 
 ```
-python train.py --config=config/toponet_vitb_512_cityscale.yaml  --seed 42
+python train.py --config=config/toponet_vitb_512_cityscale.yaml  --seed 44
 ```
 
 SpaceNet dataset:
 ```
-python train.py --config=config/toponet_vitb_256_spacenet.yaml --seed 42
+python train.py --config=config/toponet_vitb_256_spacenet.yaml --seed 44
 ```
 
 ### Inference
@@ -70,20 +70,7 @@ The core logic is implemented in `model_MGRroad.py` (renamed to `model.py`), cor
 *   **Soft Decoupling:** Implements Mask Guidance with Stop-Gradient in `SAMRoad.forward`.
 *   **Collaborative Optimization:** Implements Layer-wise Learning Rate Decay (LLRD) in `configure_optimizers`.
 
-## 📜 Citation
 
-#If you use this code, please cite our paper:
-
-#```bibtex
-#@article{mgrroad2025,
-#  title={MGR-Road: Resolving Semantic-Geometric Conflict in End-to-End Road Extraction},
-#  author={Man Yuan },
-#  journal={},
-#  year={2025},
-#  volume={XX},
-#  number={XX}
-#}
-#```
 
 ## 🙏 Acknowledgements
 We thank the authors of [SAM-Road](https://github.com/htcr/sam_road) for their open-source contribution.
