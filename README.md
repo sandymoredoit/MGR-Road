@@ -2,14 +2,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This repository contains the official PyTorch implementation of the paper: **"MGR-Road: [Your Paper Title Here]"**.
+This repository contains the official PyTorch implementation of the paper: **"MGR-Road: Resolving Semantic-Geometric Conflict in End-to-End Road Extraction"**.
 
-This code is built upon [SAM-Road](https://github.com/htcr/sam_road). We introduce **Region-Aware Sampling**, **Soft Decoupling**, and **Collaborative Optimization** to achieve state-of-the-art performance in road extraction.
-
-## 🚀 Features
-- **Full Implementation**: Includes the complete training and inference pipeline.
-- **Novel Modules**: Source code for `RegionSampler` and Soft Decoupling mechanisms.
-- **Reproducibility**: Pre-configured scripts to reproduce the results in the paper.
+This code is built upon [SAM-Road](https://github.com/htcr/sam_road). 
 
 
 ## 📝 Key Components
